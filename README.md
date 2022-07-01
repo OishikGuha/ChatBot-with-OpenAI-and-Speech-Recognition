@@ -1,4 +1,4 @@
-# Chatbot-OpenAI-and-Google-s-speech-recognition-combined-
+# Chatbot made with OpenAI and Google's Speech Recognition
 This is a little voice chatbot I made using OpenAI's davinci and Google's speech recognition package.
 
 ## Dependencies
