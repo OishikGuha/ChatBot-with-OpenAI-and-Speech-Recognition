@@ -1,11 +1,14 @@
 import openai
 from flask import Flask, redirect, render_template, request, url_for
 import mic
+import pyttsx3
+import threading
 
 app = Flask(__name__)
+engine = pyttsx3.Engine()
 
 mic_text = ""
-openai.api_key = "Enter your key here."
+openai.api_key = "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"
 
 
 @app.route("/", methods=("GET", "POST"))
@@ -19,6 +22,11 @@ def index():
         return redirect(url_for("index", result=response.choices[0].text))
 
     result = request.args.get("result")
+    engine.say(result)
+    speakThread = threading.Thread(target=engine.runAndWait, args=[])
+    endLoopThread = threading.Thread(target=engine.endLoop, args=[])
+    speakThread.start()
+    endLoopThread.start()
     return render_template("index.html", result=result)
 
 
