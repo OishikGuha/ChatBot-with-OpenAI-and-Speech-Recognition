@@ -7,6 +7,7 @@ openai
 Flask
 SpeechRecognition
 PyAudio (Can be installed from the repo)
+pyttsx3
 ```
 
 ## How to run
