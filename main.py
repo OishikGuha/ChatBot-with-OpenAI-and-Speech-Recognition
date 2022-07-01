@@ -8,7 +8,7 @@ app = Flask(__name__)
 engine = pyttsx3.Engine()
 
 mic_text = ""
-openai.api_key = "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"
+openai.api_key = ""
 
 
 @app.route("/", methods=("GET", "POST"))
