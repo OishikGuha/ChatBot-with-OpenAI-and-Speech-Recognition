@@ -5,7 +5,7 @@ import mic
 app = Flask(__name__)
 
 mic_text = ""
-openai.api_key = "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"
+openai.api_key = "Enter your key here."
 
 
 @app.route("/", methods=("GET", "POST"))
